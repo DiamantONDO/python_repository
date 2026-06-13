@@ -53,7 +53,7 @@ userB = User("Tony O. Elumelu", "Chairman", 21)
 userC = User("Mark", "Student", 17)
 userD = User("Ralph", "Freelance", 18)
 
-
+#Fixing missing C and D users
 print("=============== USING Object ===============")
 userA.greet()
 userB.greet()
