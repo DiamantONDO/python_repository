@@ -32,14 +32,17 @@ class User:
         self.u_age = u_age
 
     def greet(self):
-        print(f"Hi, I am {self.u_name} and I am a {self.u_role}")
+        print(f"Hi, I am {self.u_name} and I am {self.u_role}.")
 
     def is_adult(self):
-        return self.u_age >= 18
+        if self.u_age >= 18:
+            print(self.u_name + " is an adult.")
+        else:
+            print(self.u_name + " is a minor.")
 
     def describe(self):
-        status = "It's an adult" if self.u_age >= 18 else "It's a minor"
-        print(f"{self.u_name} is a {status}, age {self.u_age}")
+        status = "adult" if self.u_age >= 18 else "minor"
+        print(f"{self.u_name} is  {status}, age {self.u_age}.")
 
 #u_name = input("Enter your names: ")
 #u_role = input("Enter your role: ")
@@ -47,7 +50,22 @@ class User:
 
 userA = User("Diamant Anthony", "Intern", 21)
 userB = User("Tony O. Elumelu", "Chairman", 21)
+userC = User("Mark", "Student", 17)
+userD = User("Ralph", "Freelance", 18)
+
 
 print("=============== USING Object ===============")
 userA.greet()
 userB.greet()
+userC.greet()
+userD.greet()
+print("=============================================")
+userA.is_adult()
+userB.is_adult()
+userC.is_adult()
+userD.is_adult()
+print("=============================================")
+userA.describe()
+userB.describe()
+userC.describe()
+userD.describe()
