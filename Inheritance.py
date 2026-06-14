@@ -31,3 +31,23 @@ class Airbus(Aircraft):
 
 airbus = Airbus()
 airbus.fly()
+
+class User:
+    count = 0
+
+    def __init__(self, name):
+        self.name = name
+        User.count += 1
+
+    @staticmethod
+    def app_name():
+        print("MyApp v1.0")
+
+    @classmethod
+    def total_users(cls):
+        print("Total Users: " + str(cls.count))
+
+User("Diamant Anthony")
+User("Tony O. Elumelu")
+User.total_users()
+User.app_name()
