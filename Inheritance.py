@@ -51,3 +51,18 @@ User("Diamant Anthony")
 User("Tony O. Elumelu")
 User.total_users()
 User.app_name()
+
+class BankAccount:
+    def __init__(self, name, balance):
+        self.name = name
+        # __ means private
+        self.__balance = balance
+
+    def get_balance(self):
+        return self.__balance
+
+account = BankAccount("Diamant Anthony", 5655945)
+print("\n")
+print("========== PERSONAL INFORMATION ==========")
+print("My account name: " + account.name)
+print("My balance: " + str(account.get_balance()) + " Rwf")
