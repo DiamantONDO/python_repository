@@ -1,3 +1,6 @@
+import self
+
+
 class Human:
     def __init__(self, name, age):
         self.name = name
@@ -61,8 +64,12 @@ class BankAccount:
     def get_balance(self):
         return self.__balance
 
-account = BankAccount("Diamant Anthony", 5655945)
 print("\n")
+name = input("Enter your name: ")
+balance = int(input("Enter initial balance: "))
+
+account = BankAccount(name, balance)
+
 print("========== PERSONAL INFORMATION ==========")
-print("My account name: " + account.name)
-print("My balance: " + str(account.get_balance()) + " Rwf")
+print("Your account name: " + account.name)
+print("Balance: " + str(account.get_balance()) + " Rwf")
