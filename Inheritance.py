@@ -20,3 +20,14 @@ class Employee(Human):
 emp = Employee("Diamant Anthony", 21, "Intern", 500)
 emp.greet()
 emp.describe()
+
+class Aircraft:
+    def fly(self):
+        print("I fly")
+
+class Airbus(Aircraft):
+    def fly(self):
+        print("I am a A350")
+
+airbus = Airbus()
+airbus.fly()
