@@ -1,3 +1,6 @@
+import self
+
+
 class Human:
     def __init__(self, name, age, gender, height, weight, nationality):
         self.name = name
@@ -53,7 +56,7 @@ userB = User("Tony O. Elumelu", "Chairman", 21)
 userC = User("Mark", "Student", 17)
 userD = User("Ralph", "Freelance", 18)
 
-#Fixing missing C and D users
+#Fixing missing users C and D
 print("=============== USING Object ===============")
 userA.greet()
 userB.greet()
@@ -69,3 +72,16 @@ userA.describe()
 userB.describe()
 userC.describe()
 userD.describe()
+
+class Employee(Human):
+    def __init__(selfself, name, age, role, salary):
+        super().__init__(name, age)
+        self.role = role
+        self.salary = salary
+
+    def describe(selfself):
+        print(self.name + " is  a " + self.role + " earning " + str(self.salary))
+
+emp = Employee("Tony O. Elumelu", "Chairman", 21)
+emp = Employee("Diamant Anthony", "Intern", 21)
+emp.describe()
